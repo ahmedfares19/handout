@@ -1,0 +1,48 @@
+pwd >> print current work directory 
+ls >>  to list folder content 
+cd >> change directory   cd (directory)
+ls -a >> to show the hidden files which is begine with dot
+ls -l >>to show file info 
+ls -la >> show hidden file info 
+. >> this dot for the current directory 
+.. >> this two dots for the parent directory 
+cd .. >> will back to the parent directory
+~ >> means the root directory 
+cd ~ >> will back to the home directory
+mkdir >> to make directory ... mkdir newdire/
+touch >> to creat file    touch file.txt 
+open file.txt >> will open the file 
+cp >> copy  ... cp (orignal name)  (copy name)
+cp -R >> to copy the directory
+mv >> to cut and rename (file or dir)
+rm >> to remove file 
+rm -R >>to remove directory
+rm -rf >> for forced delete 
+man () >> for search obout decomentation for the command
+find >> to seach in directories 
+find . >> to list all possile directory  and file in the parent directory
+find (directory) >> to list all possible directory and file in specific directory
+find . -type d >> to list all possibel directory (only)
+find . -type f >>to list all possible file (only)
+find . -tyoe f -name "file_name"
+find . -tyoe f -iname "file_name" > to in sensetive cases
+find  . -type f -mmin -10 >> list file modified in lease than 10 min
+find  . -type f -mmin +10 >> list file modified in more than 10 min
+find  . -type f -mmin -10 -mmin >> list file modified in in range +10 or -10 
+rsync >> to sync files 
+rsync dir1/* dir2 >> sync all files (only)
+rsync -r dir1/* dir2/ synx all files and dirs
+cat (text file name) >> to read text file in the terminal
+less >> to display text files in terminal
+
+alias foo='command' >> to make custom command 
+unalias foo >> to delete  it
+
+command dir > filename.txt >>to write in text file
+>filename.txt >>> it will empty the file 
+command dir >> filename.txt >>> to append existing file 
+
+$((expression)) >> 
+echo $((4+4)) >> will print 8
+
+

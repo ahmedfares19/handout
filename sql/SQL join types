@@ -1,0 +1,83 @@
+
+What is SQL JOIN ?
+
+SQL JOIN is a method to retrieve data from two or more database tables.
+What are the different SQL JOINs ?
+
+There are a total of five JOINs. They are :
+
+  1. JOIN or INNER JOIN
+  2. OUTER JOIN
+
+     2.1 LEFT OUTER JOIN or LEFT JOIN
+     2.2 RIGHT OUTER JOIN or RIGHT JOIN
+     2.3 FULL OUTER JOIN or FULL JOIN
+
+  3. NATURAL JOIN
+  4. CROSS JOIN
+  5. SELF JOIN
+
+1. JOIN or INNER JOIN :
+
+In this kind of a JOIN, we get all records that match the condition in both the tables, and records in both the tables that do not match are not reported.
+
+In other words, INNER JOIN is based on the single fact that : ONLY the matching entries in BOTH the tables SHOULD be listed.
+
+Note that a JOIN without any other JOIN keywords (like INNER, OUTER, LEFT, etc) is an INNER JOIN. In other words, JOIN is a Syntactic sugar for INNER JOIN (see : Difference between JOIN and INNER JOIN).
+2. OUTER JOIN :
+
+OUTER JOIN retrieves
+
+Either, the matched rows from one table and all rows in the other table Or, all rows in all tables (it doesn't matter whether or not there is a match).
+
+There are three kinds of Outer Join :
+
+2.1 LEFT OUTER JOIN or LEFT JOIN
+
+This join returns all the rows from the left table in conjunction with the matching rows from the right table. If there are no columns matching in the right table, it returns NULL values.
+
+2.2 RIGHT OUTER JOIN or RIGHT JOIN
+
+This JOIN returns all the rows from the right table in conjunction with the matching rows from the left table. If there are no columns matching in the left table, it returns NULL values.
+
+2.3 FULL OUTER JOIN or FULL JOIN
+
+This JOIN combines LEFT OUTER JOIN and RIGHT OUTER JOIN. It returns row from either table when the conditions are met and returns NULL value when there is no match.
+
+In other words, OUTER JOIN is based on the fact that : ONLY the matching entries in ONE OF the tables (RIGHT or LEFT) or BOTH of the tables(FULL) SHOULD be listed.
+
+Note that `OUTER JOIN` is a loosened form of `INNER JOIN`.
+
+3. NATURAL JOIN :
+
+It is based on the two conditions :
+
+    the JOIN is made on all the columns with the same name for equality.
+    Removes duplicate columns from the result.
+
+This seems to be more of theoretical in nature and as a result (probably) most DBMS don't even bother supporting this.
+4. CROSS JOIN :
+
+It is the Cartesian product of the two tables involved. The result of a CROSS JOIN will not make sense in most of the situations. Moreover, we wont need this at all (or needs the least, to be precise).
+5. SELF JOIN :
+
+It is not a different form of JOIN, rather it is a JOIN (INNER, OUTER, etc) of a table to itself.
+JOINs based on Operators
+
+Depending on the operator used for a JOIN clause, there can be two types of JOINs. They are
+
+    Equi JOIN
+    Theta JOIN
+
+1. Equi JOIN :
+
+For whatever JOIN type (INNER, OUTER, etc), if we use ONLY the equality operator (=), then we say that the JOIN is an EQUI JOIN.
+2. Theta JOIN :
+
+This is same as EQUI JOIN but it allows all other operators like >, <, >= etc.
+
+    Many consider both EQUI JOIN and Theta JOIN similar to INNER, OUTER etc JOINs. But I strongly believe that its a mistake and makes the ideas vague. Because INNER JOIN, OUTER JOIN etc are all connected with the tables and their data where as EQUI JOIN and THETA JOIN are only connected with the operators we use in the former.
+
+    Again, there are many who consider NATURAL JOIN as some sort of "peculiar" EQUI JOIN. In fact, it is true, because of the first condition I mentioned for NATURAL JOIN. However, we dont have to restrict that simply to NATURAL JOINs alone. INNER JOINs, OUTER JOINs etc could be an EQUI JOIN too.
+
+

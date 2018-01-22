@@ -1,0 +1,86 @@
+class is a template definition of the method and variable
+constructor >> the class funcation the execute whenever an object is created 
+	it carries the same name of class and it could be multple constructors that 
+	diffrent in the number of parameters 
+
+destructor >> A destructor is a special member function of a class that is executed whenever an object of its class
+	goes out of scope. A destructor has exactly the same name as that of the class with a prefixed  tilde (~) 
+	and it can neither return a value nor can it take any parameters. 
+	Destructor can be very useful for releasing memory resources before exiting the program.
+	Destructors cannot be inherited or overloaded
+
+class <class name>
+{
+  //instance constructor
+   class_name(){
+	}
+   ~ class_name(){
+	}
+   instence ; 
+   //class member; 	
+   datatype <variable name>; 
+   //property
+   public int number{get; set;}
+   method(){
+
+
+   }
+
+   return type <method name>{
+
+}
+*****************************
+what is encasulation ? the process of enclosing one or more items 
+access specifiers
+public >> allows the class to expose its member variables and member funcations ,
+	and any public member can be accessed from anywhere .
+private >> allows a class to hide its member variables and funcations , only funcations in 
+	the same class can access its private , 
+	members , even an instance of a class cannot access its private member 
+protected >> allows a child class to access the member variables and funcations
+internal >> any member with internal access specifier can be accessed from any class or method defined 
+	within the applicatoin which the member is defined 
+protected internal >> hide its members variables and member funcations from other class except child class 
+	in the same application .
+*****************************
+what is polymorphism >> means having many forms (one interface to multiple funcations) 
+it can be dynamic or static 
+* static polymorphism >> in the same class 
+- funcation overloading 
+funcation overloading >> multiple funcation with the same name but differ from each other 
+	by the type or the number of arguments
+*dynamic polymorphism >> in different class 
+-funcation override 
+*****************************
+inhirtance
+class animal{....}
+class dog : animal {...}
+***************************
+interface >> it is defined as a syntical contract that all 
+	that all the classes inheriting the interface should follow .
+	it only contains the declaration of the members it define the 
+	stucutre that the driving class should follow 
+abstract class >> it mostly used when only few methods 
+	are to be declared by the bass class 
+
+public interface animal{
+
+void runsomething();
+int dosomething();
+}
+public class dog : animal {
+void runsomething(){
+	}
+int dosomething(){
+}
+}
+**************************************
+abstract 
+abstact class >> Abstract classes contain abstract methods, which are implemented by the derived class. 
+		The derived classes have more specialized functionality
+You cannot create an instance of an abstract class
+You cannot declare an abstract method outside an abstract class
+When a class is declared sealed, it cannot be inherited, abstract classes cannot be declared sealed.
+abstract class{}
+abstract funcation >> it is a funcation without body and it implemented by onther class 
+public abstract <func name>(){...}

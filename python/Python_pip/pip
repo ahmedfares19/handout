@@ -1,0 +1,9 @@
+pip search (*)>> for  searching about packages
+pip install (*)>> installing packages
+pip uninstall (*) >> for uninstalling packages
+pip list >> listing installed packages
+pip list -o >> for listting outdated packages
+pip list -u >> for listing updated packages
+pip install -u () >> for updating packages
+pip freeze > file.txt  >> to write down all packages into text file 
+pip install -r textFile >> to install packages form text file

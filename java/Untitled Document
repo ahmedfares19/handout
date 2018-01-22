@@ -1,0 +1,126 @@
+data type conversion:
+{
+// string to number 
+	int number ;
+	String cat = "123";
+	number = Integer.parseInt(cat);
+	System.out.println(number);
+	double dnumber;
+	String dstr = "12.21";
+	dnumber = Double.parseDouble(dstr);
+	System.out.println(dnumber);
+// number to string 
+	int strnum = 12;
+	String numb = String.valueOf(12);
+	System.out.println(numb);
+}
+
+Arraylist :
+
+Standard Java arrays are of a fixed length. After arrays are created, they cannot grow or shrink, which means that you must know in advance how many elements an array will hold.
+Array lists are created with an initial size. When this size is exceeded, the collection is automatically enlarged. When objects are removed, the array may be shrunk.
+
+      ArrayList al = new ArrayList();
+or
+      ArrayList<Integer> names = new ArrayList<Integer>();
+
+      System.out.println("Initial size of al: " + al.size());
+
+      // add elements to the array list
+      al.add("C");
+      al.add("A");
+      al.add("E");
+      al.add("B");
+      al.add("D");
+      al.add("F");
+      al.add(1, "A2");
+      System.out.println("Size of al after additions: " + al.size());
+
+      // display the array list
+      System.out.println("Contents of al: " + al);
+
+      // Remove elements from the array list
+      al.remove("F");
+      al.remove(2);
+      System.out.println("Size of al after deletions: " + al.size());
+      System.out.println("Contents of al: " + al);
+   }
+}
+output
+Initial size of al: 0
+Size of al after additions: 7
+Contents of al: [C, A2, A, E, B, D, F]
+Size of al after deletions: 5
+Contents of al: [C, A2, E, B, D]
+*****************
+a.contains() >> true or false
+a.get(index)
+a.indexof(item)
+a.toarray()
+a.size()
+*****************
+HashMap : 
+
+HashMap<Key , value> name = new HashMap<Key , value>();
+name.put(String , Value);
+name.get(String);
+name.remove();
+name.isempty();
+name.containsKey(key);
+name.size();
+name.values();
+**************************
+try - catch :
+
+try 
+{
+}
+catch(Exception x){
+}
+catch(OnterException x){
+}
+****************************
+file handeling
+import java.io.FileWriter;
+try{
+    FileWriter file = new FileWriter("file.txt");
+    System.out.println("done");
+    file.write("my new file");
+    file.close();
+	}
+catch(Exception x)
+{
+	
+}
+*********
+import java.io.FileReader;
+try{
+    FileReader file = new FileReader("file.txt");
+    int c;
+    while((c=file.read()) != -1)
+    {
+    	System.out.print((char) c);
+    }
+    
+	}
+	catch(Exception x)
+	{
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+pip install virtualenv
+
+virtualenv (Env_Name) >> create new environment
+virtualenv -p python_path (env_name) >> to create new env with specific python version
+
+source env_name/bin/activate >> active env
+
+pip freeze --locale >> packages.txt >> write down all packages in the env into file
+
+deactivate >>to get  out from the environment
+
+rm -rf env_name  >> to remove an env
+
+
+
